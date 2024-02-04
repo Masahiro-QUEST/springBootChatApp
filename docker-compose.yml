@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: ./ChatApp # Spring Bootプロジェクトのディレクトリ
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/chatapp
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: password
+
+  frontend:
+    build:
+      context: ./frontend # Vue.jsプロジェクトのディレクトリ
+
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: chatapp
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

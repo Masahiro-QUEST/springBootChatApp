@@ -1,0 +1,42 @@
+# Gradle関連
+.gradle/
+build/
+
+# 一時ファイル
+*.log
+*.pid
+*.pid.lock
+*.seed
+*.ser
+
+# Eclipse関連
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA関連
+.idea/
+*.iml
+*.iws
+
+# VSCode関連
+.vscode/
+
+# Mac OS ファイルシステム
+.DS_Store
+
+# Windows ファイルシステム
+Thumbs.db
+
+# その他の一般的な無視ファイル
+HELP.md
+
+# Node.js 依存関係
+node_modules/
+
+# Vue.js ビルド出力
+dist/
+
+# ローカル環境ファイル
+.env.local
+.env.*.local
