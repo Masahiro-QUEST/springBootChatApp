@@ -34,9 +34,6 @@ HELP.md
 # Node.js 依存関係
 node_modules/
 
-# Vue.js ビルド出力
-dist/
-
 # ローカル環境ファイル
 .env.local
 .env.*.local
