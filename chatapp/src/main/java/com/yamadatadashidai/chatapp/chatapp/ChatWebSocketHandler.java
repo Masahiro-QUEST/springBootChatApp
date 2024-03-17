@@ -14,7 +14,7 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
         String name = payload.substring(payload.indexOf("\"name\":\"") + 8, payload.indexOf("\","));
         String userMessage = payload.substring(payload.indexOf("\"message\":\"") + 11, payload.lastIndexOf("\""));
     
-        System.out.println("Received message from " + name + ": " + userMessage);
+        System.out.println("Received message from " + name + "さん: " + userMessage);
     
         // 応答メッセージを構築
         String responsePayload = name + ": " + userMessage;
